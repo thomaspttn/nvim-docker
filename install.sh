@@ -32,7 +32,7 @@ if [ -f "/proc/1/cgroup" ]; then
     git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1 && nvim
 
     # Update XDG_CONFIG_HOME
-    export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
+    sudo export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
 
 else
     echo "This doesn't seem to be a Docker container... are you sure??"
