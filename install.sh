@@ -33,7 +33,7 @@ if [ -f "/proc/1/cgroup" ]; then
     cp -r custom "${INSTALL_DIR}.config/nvim/lua/custom"
 
     # Update XDG_CONFIG_HOME
-    sudo export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
+    export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
 
 else
     echo "This doesn't seem to be a Docker container... are you sure??"
