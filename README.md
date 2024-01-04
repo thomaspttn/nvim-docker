@@ -1,12 +1,13 @@
 # nvim-docker
 **Author:** Thomas Patton
+
 Quick setup for NeoVim inside Docker, aimed at C/C++ development.
 
 ## Quick Setup 
 (From inside a Docker container)
 
 ```
-git clone https://github.com/thomaspttn/nvim-docker.git /root/nvim-docker/ && /root/nvim-docker/install.sh
+git clone https://github.com/thomaspttn/nvim-docker.git /root/nvim-docker/ && source /root/nvim-docker/install.sh
 ```
 
 ## Introduction
