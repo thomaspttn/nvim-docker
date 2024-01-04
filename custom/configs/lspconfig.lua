@@ -15,3 +15,4 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
+--

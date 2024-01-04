@@ -13,4 +13,12 @@ vim.o.shiftwidth = 4
 -- Use spaces instead of tabs
 vim.o.expandtab = true
 
+-- enable colors
 vim.o.termguicolors = true
+
+-- bash shell
+vim.o.shell = '/bin/bash'
+
+-- delim at column 81
+vim.cmd[[set colorcolumn=81]]
+
