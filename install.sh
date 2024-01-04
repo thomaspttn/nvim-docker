@@ -29,7 +29,7 @@ if [ -f "/proc/1/cgroup" ]; then
     sudo apt-get install "./ripgrep_13.0.0_amd64.deb"
 
     # CHADNV
-    git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1 && nvim
+    git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1
     cp -r custom "${INSTALL_DIR}.config/nvim/lua/custom"
 
     # Update XDG_CONFIG_HOME
