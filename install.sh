@@ -14,7 +14,7 @@ if [ -f "/proc/1/cgroup" ]; then
 
     # CLANG
     sudo apt-get install -y clang
-    sudo ln -s -f .clangd "~/.clangd"
+    sudo ln -s -f .clangd ~/.clangd
 
     # BEAR
     sudo apt-get install -y bear
@@ -30,7 +30,7 @@ if [ -f "/proc/1/cgroup" ]; then
 
     # CHADNV
     git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1
-    cp -r custom "${INSTALL_DIR}.config/nvim/lua/custom"
+    cp -r "${INSTALL_DIR}nvim_docker/custom "${INSTALL_DIR}.config/nvim/lua/custom"
 
     # Update XDG_CONFIG_HOME
     export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
