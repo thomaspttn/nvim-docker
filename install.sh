@@ -23,6 +23,7 @@ if [ -f "/proc/1/cgroup" ]; then
     wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz
     tar xzvf nvim-linux64.tar.gz
     sudo ln -s "${INSTALL_DIR}nvim-linux64/bin/nvim" /usr/local/bin/nvim
+    apt-get install -y python3-venv
 
     # RIPGREP
     curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
