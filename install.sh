@@ -31,7 +31,7 @@ if [ -f "/proc/1/cgroup" ]; then
 
     # CHADNV
     git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1
-    cp -r "${INSTALL_DIR}nvim_docker/custom "${INSTALL_DIR}.config/nvim/lua/custom"
+    cp -r "${INSTALL_DIR}nvim_docker/custom" "${INSTALL_DIR}.config/nvim/lua/"
 
     # Update XDG_CONFIG_HOME
     export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
