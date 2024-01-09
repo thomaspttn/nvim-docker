@@ -8,6 +8,11 @@ INSTALL_DIR="/root/"
 if [ -f "/proc/1/cgroup" ]; then
     echo "Running Docker container setup..."
 
+    # Update XDG_CONFIG_HOME
+    export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
+    export XDG_DATA_HOME="${INSTALL_DIR}.local/share"
+    export XDG_STATE_HOME="${INSTALL_DIR}.local/state"
+
     cd "$INSTALL_DIR"
     rm -rf "${INSTALL_DIR}.config"
     sudo apt-get update
@@ -33,8 +38,6 @@ if [ -f "/proc/1/cgroup" ]; then
     git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1
     cp -r "${INSTALL_DIR}nvim-docker/custom" "${INSTALL_DIR}.config/nvim/lua/"
 
-    # Update XDG_CONFIG_HOME
-    export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
 
 else
     echo "This doesn't seem to be a Docker container... are you sure??"
