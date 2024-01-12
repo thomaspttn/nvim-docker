@@ -1,3 +1,4 @@
+#!/bin/bash
 # FILE: install.sh
 # DESCRIPTION: Master setup script for nvim-docker
 # AUTHOR: Thomas Patton
@@ -34,12 +35,19 @@ if [ -f "/proc/1/cgroup" ]; then
     curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
     sudo apt-get install "./ripgrep_13.0.0_amd64.deb"
 
-    # CHADNV
-    git clone https://github.com/NvChad/NvChad "${INSTALL_DIR}.config/nvim" --depth 1
-    cp -r "${INSTALL_DIR}nvim-docker/custom" "${INSTALL_DIR}.config/nvim/lua/"
+    # Git Repository (provided as an argument)
+    if [ -n "$1" ]; then
+        git clone "$1" "${INSTALL_DIR}.config/nvim" --depth 1
+        cp -r "${INSTALL_DIR}nvim-docker/custom" "${INSTALL_DIR}.config/nvim/lua/"
+    else
+        echo "Error: Git repository URL not provided."
+        exit 1
+    fi
 
-
+    # Exit
+    cd ~
 else
     echo "This doesn't seem to be a Docker container... are you sure??"
 fi
+
 
