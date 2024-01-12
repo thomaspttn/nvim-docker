@@ -37,7 +37,7 @@ if [ -f "/proc/1/cgroup" ]; then
 
     # Git Repository (provided as an argument)
     if [ -n "$1" ]; then
-        git clone "$1" "${INSTALL_DIR}.config/nvim" --depth 1
+        git clone "$1" "${INSTALL_DIR}.config/nvim" 
         # cp -r "${INSTALL_DIR}nvim-docker/custom" "${INSTALL_DIR}.config/nvim/lua/"
     else
         echo "Error: Git repository URL not provided."
