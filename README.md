@@ -9,7 +9,12 @@ One line setup for NeoVim inside of a Docker container
 From inside a Docker container, run the following:
 
 ```
-git clone https://github.com/thomaspttn/nvim-docker.git /root/nvim-docker/ && source /root/nvim-docker/install.sh
+git clone https://github.com/thomaspttn/nvim-docker.git /root/nvim-docker/ && source /root/nvim-docker/install.sh <YOUR_NVIM_GIT_REPO>
+```
+For example:
+
+```
+git clone https://github.com/thomaspttn/nvim-docker.git /root/nvim-docker/ && source /root/nvim-docker/install.sh https://github.com/thomaspttn/nvim.git
 ```
 
 Note that this install overwrites several environment variables related to XDG Configuration.
