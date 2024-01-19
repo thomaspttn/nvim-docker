@@ -25,7 +25,7 @@ source /root/nvim-docker/install.sh https://github.com/thomaspttn/nvim.git
 
 Note that this install overwrites several environment variables related to XDG Configuration.
 
-## 🌐 What is This?
+## 🌐 What Is This?
 For a lot of my development work I need to develop inside Docker containers rather than my host machine. Setting up Neovim every time I do a `docker run` seemed like a pain, though, so I wrote this setup script to automate that process. `install.sh` installs the Neovim AppImage along with other tools like `ripgrep`and `bear` that I use for daily development. In the interest of supporting arbitrary configurations, `install.sh` can optionally take a link to a `nvim` Git repo specifying your custom Neovim setup.
 
 Importantly, I write a lot of this data into the `/root/` directory of the container. This avoids issues with duplicate Neovim files in the case that the Docker container is mounted (which is always in my case). I also export a number of environment variables related to XDG configuration to account for this change.
