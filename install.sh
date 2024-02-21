@@ -12,6 +12,7 @@ echo "Running Docker container setup..."
 export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
 export XDG_DATA_HOME="${INSTALL_DIR}.local/share"
 export XDG_STATE_HOME="${INSTALL_DIR}.local/state"
+export TERM="xterm-256color"
 
 cd "$INSTALL_DIR"
 rm -rf "${INSTALL_DIR}.config"
