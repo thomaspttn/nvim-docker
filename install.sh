@@ -25,6 +25,9 @@ sudo ln -s -f .clangd ~/.clangd
 # BEAR
 sudo apt-get install -y bear
 
+# XCLIP 
+sudo apt-get install -y xclip
+
 # NEOVIM
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz
 tar xzvf nvim-linux64.tar.gz
