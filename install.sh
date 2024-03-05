@@ -13,6 +13,7 @@ export XDG_CONFIG_HOME="${INSTALL_DIR}.config"
 export XDG_DATA_HOME="${INSTALL_DIR}.local/share"
 export XDG_STATE_HOME="${INSTALL_DIR}.local/state"
 export TERM="xterm-256color"
+export DISPLAY=":0"
 
 cd "$INSTALL_DIR"
 rm -rf "${INSTALL_DIR}.config"
@@ -30,7 +31,7 @@ sudo apt-get install -y xclip
 
 # NPM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$INSTALL_DIR.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install 16.15.1
 
