@@ -1,7 +1,7 @@
 # nvim-docker
 **Author:** Thomas Patton
 
-One line setup for NeoVim inside of an Ubuntu Docker container
+One line setup for Neovim inside of an Ubuntu Docker container
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
